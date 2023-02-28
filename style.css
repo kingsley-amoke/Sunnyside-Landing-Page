@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-image: url("/images/desktop/image-header.jpg");
+    background-size: cover;
+    padding-bottom: 10rem;
+    text-align: center;
+    background-position: center;  
+    width: 100vw;
+    
+}
+
+.header{
+
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+
+}
+
+.logo{
+    height: 1rem;
+}
+
+.nav-bar{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: .7rem;
+    font-family: sans-serif;
+    text-shadow: none;
+}
+
+button.contact{
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-size: .5rem;
+    font-weight: 700;
+    font-family: serif;
+}
+.menu{
+    cursor: pointer;
+}
+
+h3.title{
+    color: white;
+    text-transform: uppercase;
+    margin: 2rem;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+    grid-template-rows: repeat(3, minmax(25rem, 1fr));
+    
+}
+
+.transform{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+h4{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: .7rem;
+    color: gray;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .4rem;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(142, 142, 22, 1);
+}
+
+.egg{
+    background: url("/images/desktop/image-transform.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.cup{
+    background: url("/images/desktop/image-stand-out.jpg");
+    background-size: cover;
+    background-position: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.stand-out{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stand-out a{
+    text-shadow: 2px 2px 6px rgba(197, 59, 59, 1);
+}
+
+.grape{
+    background: url("/images/desktop/image-graphic-design.jpg");
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 1rem;
+}
+
+.lemon{
+    background: url("/images/desktop/image-photography.jpg");
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+.testimonial-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    gap: .1rem;
+
+}
+
+.testimonial-container .title{
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: .7rem;
+    font-weight: bolder;
+    font-family: serif;
+    color: gray;
+    
+}
+
+.testimonials{
+    display: flex;
+}
+
+.testimonial{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 20rem;
+}
+
+.testimonial div{
+    position: absolute;
+    bottom: 1rem;
+}
+
+.testimonial img{
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.popular{
+    display: flex;
+    overflow: hidden;
+}
+
+.popular div{
+    width: 25%;
+}
+
+.footer{
+    background: rgb(104, 160, 160);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.footer:hover{
+    background: black;
+}
+
+.footer img{
+    height: 1rem;
+    
+}
+
+.footer a{
+    text-transform: capitalize;
+    margin: .5rem;
+}
+
+.social{
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+
+@media (max-width: 600px){
+    .main{
+        display: block;
+    }
+    .cup, .egg, .transform, .stand-out, .lemon, .grape{
+        min-height: 20rem;
+    }
+    .testimonials{
+        display: block;
+    }
+    .popular{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+
+    }
+
+    .popular div{
+        max-width: 200px;
+        max-height: 100px;
+    }
+    .header .nav-bar{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        height: 15rem;
+        min-width: 80%;
+        position: absolute;
+        z-index: 3;
+        top: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem;
+        gap: 0;
+        transition: all 1s ease;
+        
+
+    }
+
+    .nav-bar:after{
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -30px;
+        border-left: 40px solid transparent;
+        border-bottom: 40px solid white;
+        border-right: none;
+        border-top: none;
+    }
+
+    .header a{
+        color: gray;
+        text-shadow: none;
+    }
+   button.contact{
+    background: rgb(200, 200, 65);
+    font-size: 1rem;
+   }
+
+   .nav-bar.toggle-menu{
+    display: none;
+   }
+
+   .menu-icon{
+    pointer-events: none;
+    padding: .4rem;
+   }
+   .menu{
+    transition: all .3s ease;
+   }
+
+   .menu:hover{
+    box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+   }
+
+}
+
+@media (min-width: 600px){
+    .popular img{
+        height: 100%;
+        width: 100%;
+    }
+    .menu{
+        display: none;
+    }
+}
